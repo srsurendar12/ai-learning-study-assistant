@@ -1,0 +1,22 @@
+DATA STRUCTURES - QUICK STUDY NOTES
+
+Arrays:
+An array stores elements of the same data type in contiguous memory locations. Access by index is O(1). Searching an unsorted array is O(n). Insertion or deletion in the middle is generally O(n).
+
+Stacks:
+A stack follows LIFO (Last In, First Out). Main operations are push, pop and peek. A stack can be implemented using an array or linked list. Applications include function calls, undo operations and expression evaluation.
+
+Queues:
+A queue follows FIFO (First In, First Out). Main operations are enqueue and dequeue. Queues are used in scheduling, buffering and breadth-first search.
+
+Linked Lists:
+A linked list consists of nodes connected by links. A singly linked-list node normally stores data and a pointer to the next node. Insertion at the beginning is O(1), while searching for a value is O(n).
+
+Trees:
+A binary tree is a tree in which each node has at most two children. A binary search tree keeps smaller values on the left and larger values on the right. In a balanced binary search tree, search can be O(log n).
+
+Graphs:
+A graph contains vertices and edges. BFS explores level by level and commonly uses a queue. DFS explores deeply and commonly uses recursion or a stack.
+
+Big-O:
+Big-O notation describes how an algorithm's running time or space grows as input size increases. Common complexities include O(1), O(log n), O(n), O(n log n), and O(n^2).

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Learning & Study Assistant</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">RAG • MEMORY • TOOLS</p>
+      <h1>🎓 AI Learning & Study Assistant</h1>
+      <p>Upload your notes, ask questions, generate quizzes and build a personalized study plan.</p>
+    </div>
+    <div id="status" class="status">Checking system...</div>
+  </header>
+
+  <main class="container">
+    <section class="grid two">
+      <div class="card">
+        <h2>📚 Study Materials</h2>
+        <p class="muted">Upload TXT, MD or PDF course material.</p>
+        <form id="uploadForm">
+          <input type="file" id="fileInput" accept=".txt,.md,.pdf" required />
+          <button type="submit">Upload Material</button>
+        </form>
+        <div id="uploadMessage" class="message"></div>
+        <div id="documents"></div>
+      </div>
+
+      <div class="card">
+        <h2>🧠 Student Memory</h2>
+        <form id="memoryForm">
+          <label>Name</label>
+          <input id="studentName" placeholder="Your name" />
+          <label>Learning preference</label>
+          <input id="preference" placeholder="e.g. examples and short notes" />
+          <label>Study goal</label>
+          <input id="goal" placeholder="e.g. score 90% in Data Structures" />
+          <button type="submit">Save Memory</button>
+        </form>
+        <div id="memoryMessage" class="message"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>💬 Ask from Your Study Material</h2>
+      <div class="ask-row">
+        <input id="question" placeholder="e.g. What is the difference between stack and queue?" />
+        <button id="askBtn">Ask AI</button>
+      </div>
+      <div id="answer" class="answer hidden"></div>
+    </section>
+
+    <section class="grid two">
+      <div class="card">
+        <h2>📝 Quiz Generator</h2>
+        <label>Topic</label>
+        <input id="quizTopic" value="Data Structures" />
+        <label>Difficulty</label>
+        <select id="quizDifficulty">
+          <option>easy</option>
+          <option selected>medium</option>
+          <option>hard</option>
+        </select>
+        <label>Questions</label>
+        <select id="quizCount">
+          <option>3</option>
+          <option selected>5</option>
+          <option>10</option>
+        </select>
+        <button id="quizBtn">Generate Quiz</button>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="card">
+        <h2>📅 Study Plan</h2>
+        <label>Topic</label>
+        <input id="planTopic" value="Data Structures" />
+        <label>Days</label>
+        <input id="planDays" type="number" min="1" value="5" />
+        <label>Hours per day</label>
+        <input id="planHours" type="number" min="1" value="2" />
+        <label>Exam date (optional)</label>
+        <input id="examDate" type="date" />
+        <button id="planBtn">Create Study Plan</button>
+        <div id="planArea"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>📊 Progress & Memory</h2>
+      <div id="progress"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AI Learning & Study Assistant • Student Project • RAG + Memory + Tools</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
